@@ -6,7 +6,7 @@ def extract_wwr_jobs(keyword):
     response = get(f"{base_url}{keyword}") 
 
     if response.status_code != 200: #check the response
-       print("can't request website")
+       print("Can't request website...")
     else:
         results = []
         soup = BeautifulSoup(response.text, "html.parser") #response.text는 웹사이트의 코드를 줌
